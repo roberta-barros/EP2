@@ -63,7 +63,7 @@ def sorteia_questao(dic, nivel):
         a = random.choice(questoes)
     return a
 
-def sorteia_questao_inedida(dic, nivel, lista):
+def sorteia_questao_inedita(dic, nivel, lista):
     a = sorteia_questao(dic, nivel)
     while a in lista:
         a = sorteia_questao(dic, nivel)
