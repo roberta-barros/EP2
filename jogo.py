@@ -38,3 +38,7 @@ while jogar_novamente == True:
                 resposta = input('Qual sua resposta? ')
                 if resposta not in todas_respostas_lista:
                     print('Opção inválida! \nAs opções de resposta são "A", "B", "C", "D", "ajuda", "pula" e "parar"!')
+                else:
+                    if resposta=='ajuda':
+                        funcoes.gera_ajuda(questao_printada)
+                        print('Ok, lá vem ajuda! Você ainda tem 1 ajudas!')
