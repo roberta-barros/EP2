@@ -10,7 +10,7 @@ while jogar_novamente == True:
     todas_respostas_lista = ['A', 'B', 'C', 'D', 'pular', 'ajuda', 'parar']
     premios = [1000, 5000, 10000, 30000, 50000, 100000, 300000, 500000, 1000000]
     pergunta = perguntas.quest
-    base_questoes = funcoes.transforma_base(perguntas)
+    base_questoes = funcoes.transforma_base(pergunta)
     valida_base = funcoes.valida_questoes(base_questoes)
     print('Olá! Você está na Fortuna DesSoft e terá a oportunidade de enriquecer!')
     nome = input('Qual seu nome? ')
