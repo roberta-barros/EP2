@@ -26,7 +26,7 @@ while jogar_novamente == True:
     valida_medio = funcoes.valida_questoes(medias)
     valida_dificil = funcoes.valida_questoes(dificeis)
     questoes_sorteadas = []
-    if valida_facil != [{},{},{},{},{},{},{},{},{},{},{},{}] or valida_medio != [{},{},{},{},{},{},{},{},{},{}] or valida_dificil != [{},{},{},{},{},{},{},{},{},{}]:
+    if valida_facil != [] or valida_medio != [{},{},{},{},{},{},{},{},{},{}] or valida_dificil != [{},{},{},{},{},{},{},{},{},{}]:
         print('ERRO! O jogo não pode ser iniciado')
     else:
         for i in range(len(lista_perguntas)):
