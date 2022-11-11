@@ -40,9 +40,20 @@ while jogar_novamente == True:
             if resposta not in todas_respostas_lista:
                 print('Opção inválida! \nAs opções de resposta são "A", "B", "C", "D", "ajuda", "pula" e "parar"!')
             else:
+                ajudas=2
+                pulos=3
                 if resposta == 'ajuda':
                     ajuda = funcoes.gera_ajuda(questao_sorteada)
                     print('Ok, lá vem ajuda! Você ainda tem 1 ajudas!')
                     print(ajuda)
                     print(questao_printada)
                     resposta = input('Qual sua resposta? ')
+                    ajudas-=1
+                if resposta=='pula':
+                    if pulos>0:
+                        questao_sorteada = funcoes.sorteia_questao_inedita(base_questoes, nivel, questoes_sorteadas)
+                        questao_printada = funcoes.questao_para_texto(questao_sorteada, id)
+                        print(questao_printada)
+                        resposta = input('Qual sua resposta? ')
+                    
+
