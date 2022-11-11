@@ -26,7 +26,7 @@ quest = [{'titulo': 'Qual o resultado da operação 57 + 32?',
          {'titulo': 'Qual o feriado do aniversário da cidade de São Paulo?',
           'nivel': 'facil',
           'opcoes': {'A': '25 de Janeiro', 'B': '24 de Março', 'C': '9 de Julho', 'D': '12 de Novembro'},
-          'correta': ' '},
+          'correta': 'A'},
 
          {'titulo': 'Qual destas não é uma fruta?',
           'nivel': 'facil',
