@@ -43,12 +43,13 @@ while jogar_novamente == True:
                 ajudas=2
                 pulos=3
                 if resposta == 'ajuda':
-                    ajuda = funcoes.gera_ajuda(questao_sorteada)
-                    print('Ok, lá vem ajuda! Você ainda tem 1 ajudas!')
-                    print(ajuda)
-                    print(questao_printada)
-                    resposta = input('Qual sua resposta? ')
-                    ajudas-=1
+                    if ajudas>0:
+                        ajuda = funcoes.gera_ajuda(questao_sorteada)
+                        print('Ok, lá vem ajuda! Você ainda tem 1 ajudas!')
+                        print(ajuda)
+                        print(questao_printada)
+                        resposta = input('Qual sua resposta? ')
+                        ajudas-=1
                 if resposta=='pula':
                     if pulos>0:
                         questao_sorteada = funcoes.sorteia_questao_inedita(base_questoes, nivel, questoes_sorteadas)
