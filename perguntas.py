@@ -156,105 +156,105 @@ quest = [{'titulo': 'Qual o resultado da operação 57 + 32?',
          {'titulo': 'O que é Necrose?',
           'nivel': 'dificil',
           'opcoes': {'A': 'Uma banda de Rock', 'B': 'Uma marca de luxo', 'C': 'Cidade Francesa', 'D': 'Morte de tecido orgânico'},
-          'correta': 'D'}
+          'correta': 'D'},
 
-          {'titulo': 'Qual a capital do Acre?',
-          'nivel':'facil',
-          'opcoes':{'A': 'Rio Branco', 'B': 'Barcelona', 'C': 'Carapicuiba', 'D': 'Cascavel'}
-          'correta': 'A'}
+         {'titulo': 'Qual a capital do Acre?',
+          'nivel': 'facil',
+          'opcoes':{'A': 'Rio Branco', 'B': 'Barcelona', 'C': 'Carapicuiba', 'D': 'Cascavel'},
+          'correta': 'A'},
 
-          {'titulo': 'Qual  o resultado dessa operação? 22*22**2',
+         {'titulo': 'Qual  o resultado dessa operação? 22*22**2',
           'nivel':'dificil',
-          'opcoes':{'A': '123456', 'B': '234256', 'C': '22', 'D': '478967'}
-          'correta': 'B'}
+          'opcoes':{'A': '123456', 'B': '234256', 'C': '22', 'D': '478967'},
+          'correta': 'B'},
 
-          {'titulo': 'Quantos litros de sangue uma pessoa normalmente tem?',
+         {'titulo': 'Quantos litros de sangue uma pessoa normalmente tem?',
           'nivel':'medio',
-          'opcoes':{'A': 'de 1 a 2', 'B': 'de 3 a 5', 'C': 'de 4 a 6', 'D': 'de 7 a 9'}
-          'correta': 'C'}
+          'opcoes':{'A': 'de 1 a 2', 'B': 'de 3 a 5', 'C': 'de 4 a 6', 'D': 'de 7 a 9'},
+          'correta': 'C'},
 
-          {'titulo': 'Qual o livro mais vendido do mundo depois da Biblia?',
+         {'titulo': 'Qual o livro mais vendido do mundo depois da Biblia?',
           'nivel':'dificil',
-          'opcoes':{'A': 'Harry Potter e a pedra filosofal', 'B': 'Senhor dos aneis', 'C': 'As 50 leis do poder', 'D': 'Dom Quixote'}
-          'correta': 'D'}
+          'opcoes':{'A': 'Harry Potter e a pedra filosofal', 'B': 'Senhor dos aneis', 'C': 'As 50 leis do poder', 'D': 'Dom Quixote'},
+          'correta': 'D'},
 
-          {'titulo': 'Qual o menor pais do mundo?',
+         {'titulo': 'Qual o menor pais do mundo?',
           'nivel':'facil',
-          'opcoes':{'A': 'Australia', 'B': 'Portugal', 'C': 'Vaticano', 'D': 'Bucareste'}
-          'correta': 'C'}
+          'opcoes':{'A': 'Australia', 'B': 'Portugal', 'C': 'Vaticano', 'D': 'Bucareste'},
+          'correta': 'C'},
 
-          {'titulo': 'Quem pintou o quadro Guernica?',
+         {'titulo': 'Quem pintou o quadro Guernica?',
           'nivel':'medio',
-          'opcoes':{'A': 'Pablo Picasso', 'B': 'Romero Britto', 'C': 'Leonardo da Vinci', 'D': 'Tarcila do Amaral'}
-          'correta': 'A'}
+          'opcoes':{'A': 'Pablo Picasso', 'B': 'Romero Britto', 'C': 'Leonardo da Vinci', 'D': 'Tarcila do Amaral'},
+          'correta': 'A'},
 
-          {'titulo': 'Quanto tempo a luz do sol demora pra chegar na terra?',
+         {'titulo': 'Quanto tempo a luz do sol demora pra chegar na terra?',
           'nivel':'medio',
-          'opcoes':{'A': '7 min', 'B': '11 min', 'C': '12 min', 'D': '8 min'}
-          'correta': 'D'}
+          'opcoes':{'A': '7 min', 'B': '11 min', 'C': '12 min', 'D': '8 min'},
+          'correta': 'D'},
 
-          {'titulo': 'Qual o maior pais do mundo?',
+         {'titulo': 'Qual o maior pais do mundo?',
           'nivel':'facil',
-          'opcoes':{'A': 'Russia', 'B': 'Canada', 'C': 'China', 'D': 'Brasil'}
-          'correta': 'A'}
+          'opcoes':{'A': 'Russia', 'B': 'Canada', 'C': 'China', 'D': 'Brasil'},
+          'correta': 'A'},
 
-          {'titulo': 'De onde é a invençao do chuveiro eletrico?',
+         {'titulo': 'De onde é a invençao do chuveiro eletrico?',
           'nivel':'dificil',
-          'opcoes':{'A': 'Inglaterra', 'B': 'Brasil', 'C': 'França', 'D': 'Dinamarca'}
-          'correta': 'B'}
+          'opcoes':{'A': 'Inglaterra', 'B': 'Brasil', 'C': 'França', 'D': 'Dinamarca'},
+          'correta': 'B'},
 
-          {'titulo': 'Quanto é 1+1?',
+         {'titulo': 'Quanto é 1+1?',
           'nivel':'facil',
-          'opcoes':{'A': '2', 'B': '3', 'C': '4', 'D': '5'}
-          'correta': '2'}
+          'opcoes':{'A': '2', 'B': '3', 'C': '4', 'D': '5'},
+          'correta': '2'},
 
-          {'titulo': 'De quem é a frase: Penso logo existo?',
+         {'titulo': 'De quem é a frase: Penso logo existo?',
           'nivel':'dificil',
-          'opcoes':{'A': 'Faustao', 'B': 'Platao', 'C': 'Socrates', 'D': 'Descartes'}
-          'correta': 'D'}
+          'opcoes':{'A': 'Faustao', 'B': 'Platao', 'C': 'Socrates', 'D': 'Descartes'},
+          'correta': 'D'},
 
-          {'titulo': 'Quantos elementos a tabela periodica possue?',
+         {'titulo': 'Quantos elementos a tabela periodica possue?',
           'nivel':'medio',
-          'opcoes':{'A': '115', 'B': '119', 'C': '118', 'D': '111'}
-          'correta': 'C'}
+          'opcoes':{'A': '115', 'B': '119', 'C': '118', 'D': '111'},
+          'correta': 'C'},
 
-          {'titulo': 'Qual a traduçao do ingles para o portugues da seguinte pelavra: profile?',
+         {'titulo': 'Qual a traduçao do ingles para o portugues da seguinte pelavra: profile?',
           'nivel':'facil',
-          'opcoes':{'A': 'talco', 'B': 'colher', 'C': 'perfil', 'D': 'panela'}
-          'correta': 'C'}
+          'opcoes':{'A': 'talco', 'B': 'colher', 'C': 'perfil', 'D': 'panela'},
+          'correta': 'C'},
 
-          {'titulo': 'Qual fruta envenenada comeu a Branca de neve?',
+         {'titulo': 'Qual fruta envenenada comeu a Branca de neve?',
           'nivel':'facil',
-          'opcoes':{'A': 'maça', 'B': 'pera', 'C': 'pessego', 'D': 'melancia'}
-          'correta': 'A'}
+          'opcoes':{'A': 'maça', 'B': 'pera', 'C': 'pessego', 'D': 'melancia'},
+          'correta': 'A'},
 
-          {'titulo': 'Em qual cidade de Sao Paulo esta localizado o museu MASP?',
+         {'titulo': 'Em qual cidade de Sao Paulo esta localizado o museu MASP?',
           'nivel':'facil',
-          'opcoes':{'A': 'Sao Paulo', 'B': 'Rio Claro', 'C': 'Sao caetano', 'D': 'Itanhaem'}
-          'correta': 'A'}
+          'opcoes':{'A': 'Sao Paulo', 'B': 'Rio Claro', 'C': 'Sao caetano', 'D': 'Itanhaem'},
+          'correta': 'A'},
 
-          {'titulo': 'Quantas patas tem uma aranha?',
+         {'titulo': 'Quantas patas tem uma aranha?',
           'nivel':'facil',
-          'opcoes':{'A': '3', 'B': '16', 'C': '8', 'D': '6'}
-          'correta': 'C'}
+          'opcoes':{'A': '3', 'B': '16', 'C': '8', 'D': '6'},
+          'correta': 'C'},
 
-          {'titulo': 'Em que ano Brasilia foi fundada?',
+         {'titulo': 'Em que ano Brasilia foi fundada?',
           'nivel':'dificil',
-          'opcoes':{'A': '1962', 'B': '1970', 'C': '1972', 'D': '1960'}
-          'correta': 'D'}
+          'opcoes':{'A': '1962', 'B': '1970', 'C': '1972', 'D': '1960'},
+          'correta': 'D'},
 
-          {'titulo': 'Quanto é 11+11?',
+         {'titulo': 'Quanto é 11+11?',
           'nivel':'facil',
-          'opcoes':{'A': '21', 'B': '22', 'C': '24', 'D': '25'}
-          'correta': 'B'}
+          'opcoes':{'A': '21', 'B': '22', 'C': '24', 'D': '25'},
+          'correta': 'B'},
 
-          {'titulo': 'Quantos km sao corridos em uma maratona?',
+         {'titulo': 'Quantos km sao corridos em uma maratona?',
           'nivel':'facil',
-          'opcoes':{'A': '42', 'B': '41', 'C': '24', 'D': '78'}
-          'correta': 'A'}
+          'opcoes':{'A': '42', 'B': '41', 'C': '24', 'D': '78'},
+          'correta': 'A'},
 
-          {'titulo': 'Quantos metros tem em 200 centimetros?',
+         {'titulo': 'Quantos metros tem em 200 centimetros?',
           'nivel':'facil',
-          'opcoes':{'A': '3', 'B': '2', 'C': '1', 'D': '4'}
-          'correta': 'B'}
-          ]
+          'opcoes':{'A': '3', 'B': '2', 'C': '1', 'D': '4'},
+          'correta': 'B'},
+         ]

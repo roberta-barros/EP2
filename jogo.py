@@ -64,24 +64,31 @@ while jogar_novamente == True:
                         resposta = input('Qual sua resposta? ')
                 if resposta == 'pular':
                     if pulos > 0:
-                        questoes += 1
+                        questoes -= 1
                         pulos -= 1
                         print(f'Ok, pulando! Você ainda tem direito a {pulos} pulos')
-                        questao_sorteada = funcoes.sorteia_questao_inedita(base_questoes, nivel, questoes_sorteadas)
-                        questao_printada = funcoes.questao_para_texto(questao_sorteada, questoes)
-                        print(questao_printada)
-                        resposta = input('Qual sua resposta? ')
-                        questoes_sorteadas.append(questao_sorteada)
+                        jogar = True
                     if pulos == 0:
                         print('Você não tem direito a mais pulos')
-                        print(questao_printada)
-                        resposta = input('Qual sua resposta? ')
+                        questoes -= 1
+                        jogar = True
                 if resposta == 'parar':
-                    print(f'Deseja mesmo parar? Se sim, seu prêmio é de {premio}')
+                    print(f'Deseja mesmo parar [S/N]? Se sim, seu prêmio é de {premio}')
+                    parar = input('')
+                    if parar == 'S':
+                        jogar = False
+                        print('Deseja jogar novamente? [S/N]')
+                        jogar_dnv = input('')
+                        if jogar_dnv == 'S':
+                            jogar_novamente = True
                 if resposta in respostas_lista:
                     if resposta == questao_sorteada['correta']:
-                        i += 1
-                        print(f'Você acertou! Seu prêmio atual é de {premio} reais')
+                        for i in range(len(premios)):
+                            premio = premios[i]
+                            print(f'Você acertou! Seu prêmio atual é de {premio} reais')
+                        questoes_corretas += 1
+                        if questoes_corretas == 9:
+                            print('Parabéns! Você zerou o jogo e ganhou 1 milhão de reais')
                     else:
                         print('Você errou!')
         if questoes > 3 and questoes <= 6:
@@ -129,13 +136,25 @@ while jogar_novamente == True:
                         resposta = input('Qual sua resposta? ')
                 if resposta == 'parar':
                     print(f'Deseja mesmo parar? Se sim, seu prêmio é de {premio}')
+                    parar = input('')
+                    if parar == 'S':
+                        jogar = False
+                        print('Deseja jogar novamente? [S/N]')
+                        jogar_dnv = input('')
+                        if jogar_dnv == 'S':
+                            jogar_novamente = True
                 if resposta in respostas_lista:
                     if resposta == questao_sorteada['correta']:
-                        i += 1
-                        print(f'Você acertou! Seu prêmio atual é de {premio} reais')
+                        for i in range(len(premios)):
+                            premio = premios[i]
+                            print(f'Você acertou! Seu prêmio atual é de {premio} reais')
+                        questoes_corretas += 1
+                        if questoes_corretas == 9:
+                            print('Parabéns! Você zerou o jogo e ganhou 1 milhão de reais')
                     else:
                         print('Você errou!')
         if questoes > 6 and questoes <= 9:
+            print('HEY! Você passou para o nível DIFÍCIL')
             nivel = 'dificil'
             questao_sorteada = funcoes.sorteia_questao_inedita(base_questoes, nivel, questoes_sorteadas)
             questao_printada = funcoes.questao_para_texto(questao_sorteada, questoes)
@@ -178,9 +197,22 @@ while jogar_novamente == True:
                         resposta = input('Qual sua resposta? ')
                 if resposta == 'parar':
                     print(f'Deseja mesmo parar? Se sim, seu prêmio é de {premio}')
+                    parar = input('')
+                    if parar == 'S':
+                        jogar = False
+                        print('Deseja jogar novamente? [S/N]')
+                        jogar_dnv = input('')
+                        if jogar_dnv == 'S':
+                            jogar_novamente = True
+                    if parar == 'N':
+                        jogar = True
                 if resposta in respostas_lista:
                     if resposta == questao_sorteada['correta']:
-                        i += 1
-                        print(f'Você acertou! Seu prêmio atual é de {premio} reais')
+                        for i in range(len(premios)):
+                            premio = premios[i]
+                            print(f'Você acertou! Seu prêmio atual é de {premio} reais')
+                        questoes_corretas += 1
+                        if questoes_corretas == 9:
+                            print('Parabéns! Você zerou o jogo e ganhou 1 milhão de reais')
                     else:
                         print('Você errou!')
