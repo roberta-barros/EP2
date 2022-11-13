@@ -9,10 +9,9 @@ while jogar_novamente == True:
     respostas_lista = ['A', 'B', 'C', 'D']
     todas_respostas_lista = ['A', 'B', 'C', 'D', 'pular', 'ajuda', 'parar']
     premios = [0, 1000, 5000, 10000, 30000, 50000, 100000, 300000, 500000, 1000000]
-    i = 0
     ajudas = 2
     pulos = 3
-    premio = premios[i]
+    j = 0
     lista_perguntas = perguntas.quest
     base_questoes = funcoes.transforma_base(lista_perguntas)
     questoes_sorteadas = []
@@ -28,10 +27,10 @@ while jogar_novamente == True:
                 x = False
                 jogar = False
     if x == True:
-        print('Olá! Você está na Fortuna DesSoft e terá a oportunidade de enriquecer!')
+        print('\33[1;33mOlá! Você está na Fortuna DesSoft e terá a oportunidade de enriquecer!\33[m\n')
         nome = input('Qual seu nome? ')
         print(f'Ok {nome}, você tem direito a pular 3 vezes e 2 ajudas!')                     
-        print('As opções de resposta são "A", "B", "C", "D", "ajuda", "pular" e "parar"!')
+        print('\33[1;33mAs opções de resposta são "A", "B", "C", "D", "ajuda", "pular" e "parar"!/33[m\n')
         print('O jogo já vai começar! Lá vem a primeira questão!')
         print('Vamos começar com as questões do nível FACIL!')
     while jogar == True:
@@ -50,7 +49,7 @@ while jogar_novamente == True:
                     ajudas -= 1
                     if ajudas > 0:
                         ajuda = funcoes.gera_ajuda(questao_sorteada)
-                        print('Ok, lá vem ajuda! Você ainda tem 1 ajudas!')
+                        print('\33[1;34mOk, lá vem ajuda! Você ainda tem 1 ajudas!\33[m\n')
                         print(ajuda)
                         print(questao_printada)
                         resposta = input('Qual sua resposta? ')
@@ -65,13 +64,16 @@ while jogar_novamente == True:
                 if resposta == 'pular':
                     pulos -= 1
                     if pulos > 0:
-                        questoes -= 1
                         print(f'Ok, pulando! Você ainda tem direito a {pulos} pulos')
-                        jogar = True
+                        questao_sorteada = funcoes.sorteia_questao_inedita(base_questoes, nivel, questoes_sorteadas)
+                        questao_printada = funcoes.questao_para_texto(questao_sorteada, questoes)
+                        print(questao_printada)
+                        resposta = input('Qual sua resposta? ')
+                        questoes_sorteadas.append(questao_sorteada)
                     if pulos == 0:
                         print('Você não tem direito a mais pulos')
-                        questoes -= 1
-                        jogar = True
+                        print(questao_printada)
+                        resposta = input('Qual sua resposta? ')
                 if resposta == 'parar':
                     print(f'Deseja mesmo parar [S/N]? Se sim, seu prêmio é de {premio}')
                     parar = input('')
@@ -83,13 +85,12 @@ while jogar_novamente == True:
                             jogar_novamente = True
                 if resposta in respostas_lista:
                     if resposta == questao_sorteada['correta']:
-                        for i in range(len(premios)):
-                            print(f'Você acertou! Seu prêmio atual é de {premios[i]} reais')
+                        j += 1
+                        premio = premios[j]
+                        print(f'Você acertou! Seu prêmio atual é de {premio} reais')
                         questoes_corretas += 1
-                        if questoes_corretas == 9:
-                            print('Parabéns! Você zerou o jogo e ganhou 1 milhão de reais')
                     else:
-                        print('Você errou!')
+                        print('Você errou e perdeu tudo!')
                         jogar = False
                         print('Deseja jogar novamente? [S/N]')
                         jogar_dnv = input('')
@@ -98,8 +99,9 @@ while jogar_novamente == True:
                         else:
                             print('Até mais!')
                             jogar_novamente = False
-        if questoes > 3 and questoes <= 6:
+        if questoes == 4:
             print('HEY! Você passou para o nível MÉDIO')
+        if questoes > 3 and questoes <= 6:
             nivel = 'medio'
             questao_sorteada = funcoes.sorteia_questao_inedita(base_questoes, nivel, questoes_sorteadas)
             questao_printada = funcoes.questao_para_texto(questao_sorteada, questoes)
@@ -128,7 +130,6 @@ while jogar_novamente == True:
                 if resposta == 'pular':
                     pulos -= 1
                     if pulos > 0:
-                        questoes += 1
                         print(f'Ok, pulando! Você ainda tem direito a {pulos} pulos')
                         questao_sorteada = funcoes.sorteia_questao_inedita(base_questoes, nivel, questoes_sorteadas)
                         questao_printada = funcoes.questao_para_texto(questao_sorteada, questoes)
@@ -150,14 +151,12 @@ while jogar_novamente == True:
                             jogar_novamente = True
                 if resposta in respostas_lista:
                     if resposta == questao_sorteada['correta']:
-                        for i in range(len(premios)):
-                            premio = premios[i]
-                            print(f'Você acertou! Seu prêmio atual é de {premio} reais')
+                        j += 1
+                        premio = premios[j]
+                        print(f'Você acertou! Seu prêmio atual é de {premio} reais')
                         questoes_corretas += 1
-                        if questoes_corretas == 9:
-                            print('Parabéns! Você zerou o jogo e ganhou 1 milhão de reais')
                     else:
-                        print('Você errou!')
+                        print('Você errou e perdeu tudo!')
                         jogar = False
                         print('Deseja jogar novamente? [S/N]')
                         jogar_dnv = input('')
@@ -166,8 +165,9 @@ while jogar_novamente == True:
                         else:
                             print('Até mais!')
                             jogar_novamente = False
-        if questoes > 6 and questoes <= 9:
+        if questoes == 7:
             print('HEY! Você passou para o nível DIFÍCIL')
+        if questoes > 6 and questoes <= 9:
             nivel = 'dificil'
             questao_sorteada = funcoes.sorteia_questao_inedita(base_questoes, nivel, questoes_sorteadas)
             questao_printada = funcoes.questao_para_texto(questao_sorteada, questoes)
@@ -176,6 +176,8 @@ while jogar_novamente == True:
             questoes_sorteadas.append(questao_sorteada)
             if resposta not in todas_respostas_lista:
                 print('Opção inválida! \nAs opções de resposta são "A", "B", "C", "D", "ajuda", "pular" e "parar"!')
+                print(questao_printada)
+                resposta = input('Qual sua resposta? ')
             else:
                 if resposta == 'ajuda':
                     ajudas -= 1
@@ -219,14 +221,14 @@ while jogar_novamente == True:
                         jogar = True
                 if resposta in respostas_lista:
                     if resposta == questao_sorteada['correta']:
-                        for i in range(len(premios)):
-                            premio = premios[i]
-                            print(f'Você acertou! Seu prêmio atual é de {premio} reais')
+                        j += 1
+                        premio = premios[j]
+                        print(f'Você acertou! Seu prêmio atual é de {premio} reais')
                         questoes_corretas += 1
                         if questoes_corretas == 9:
-                            print('Parabéns! Você zerou o jogo e ganhou 1 milhão de reais')
+                            print('\33[1;31mParabéns! Você zerou o jogo e ganhou 1 milhão de reais\33[m')
                     else:
-                        print('Você errou!')
+                        print('Você errou e perdeu tudo!')
                         jogar = False
                         print('Deseja jogar novamente? [S/N]')
                         jogar_dnv = input('')
