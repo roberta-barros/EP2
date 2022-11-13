@@ -46,8 +46,12 @@ while jogar_novamente == True:
                 print('Opção inválida! \nAs opções de resposta são "A", "B", "C", "D", "ajuda", "pular" e "parar"!')
             else:
                 if resposta == 'ajuda':
-                    ajudas -= 1
+                    if ajudas == 0:
+                        print('Não deu! Você não tem mais direito à ajuda')
+                        print(questao_printada)
+                        resposta = input('Qual sua resposta? ')
                     if ajudas > 0:
+                        ajudas -= 1
                         ajuda = funcoes.gera_ajuda(questao_sorteada)
                         print('\33[1;34mOk, lá vem ajuda! Você ainda tem 1 ajudas!\33[m\n')
                         print(ajuda)
@@ -57,23 +61,19 @@ while jogar_novamente == True:
                             print('Não deu! Você já pediu ajuda nessa questão')
                             print(questao_printada)
                             resposta = input('Qual sua resposta? ')
-                    if ajudas == 0:
-                        print('Não deu! Você não tem mais direito à ajuda')
+                if resposta == 'pular':
+                    if pulos == 0:
+                        print('Você não tem direito a mais pulos')
                         print(questao_printada)
                         resposta = input('Qual sua resposta? ')
-                if resposta == 'pular':
-                    pulos -= 1
                     if pulos > 0:
+                        pulos -= 1
                         print(f'Ok, pulando! Você ainda tem direito a {pulos} pulos')
                         questao_sorteada = funcoes.sorteia_questao_inedita(base_questoes, nivel, questoes_sorteadas)
                         questao_printada = funcoes.questao_para_texto(questao_sorteada, questoes)
                         print(questao_printada)
                         resposta = input('Qual sua resposta? ')
                         questoes_sorteadas.append(questao_sorteada)
-                    if pulos == 0:
-                        print('Você não tem direito a mais pulos')
-                        print(questao_printada)
-                        resposta = input('Qual sua resposta? ')
                 if resposta == 'parar':
                     print(f'Deseja mesmo parar [S/N]? Se sim, seu prêmio é de {premio}')
                     parar = input('')
@@ -112,8 +112,12 @@ while jogar_novamente == True:
                 print('Opção inválida! \nAs opções de resposta são "A", "B", "C", "D", "ajuda", "pular" e "parar"!')
             else:
                 if resposta == 'ajuda':
-                    ajudas -= 1
+                    if ajudas == 0:
+                        print('Não deu! Você não tem mais direito à ajuda')
+                        print(questao_printada)
+                        resposta = input('Qual sua resposta? ')
                     if ajudas > 0:
+                        ajudas -= 1
                         ajuda = funcoes.gera_ajuda(questao_sorteada)
                         print('Ok, lá vem ajuda! Você ainda tem 1 ajudas!')
                         print(ajuda)
@@ -123,23 +127,19 @@ while jogar_novamente == True:
                             print('Não deu! Você já pediu ajuda nessa questão')
                             print(questao_printada)
                             resposta = input('Qual sua resposta? ')
-                    if ajudas == 0:
-                        print('Não deu! Você não tem mais direito à ajuda')
+                if resposta == 'pular':
+                    if pulos == 0:
+                        print('Você não tem direito a mais pulos')
                         print(questao_printada)
                         resposta = input('Qual sua resposta? ')
-                if resposta == 'pular':
-                    pulos -= 1
                     if pulos > 0:
+                        pulos -= 1
                         print(f'Ok, pulando! Você ainda tem direito a {pulos} pulos')
                         questao_sorteada = funcoes.sorteia_questao_inedita(base_questoes, nivel, questoes_sorteadas)
                         questao_printada = funcoes.questao_para_texto(questao_sorteada, questoes)
                         print(questao_printada)
                         resposta = input('Qual sua resposta? ')
                         questoes_sorteadas.append(questao_sorteada)
-                    if pulos == 0:
-                        print('Você não tem direito a mais pulos')
-                        print(questao_printada)
-                        resposta = input('Qual sua resposta? ')
                 if resposta == 'parar':
                     print(f'Deseja mesmo parar? Se sim, seu prêmio é de {premio}')
                     parar = input('')
@@ -180,8 +180,12 @@ while jogar_novamente == True:
                 resposta = input('Qual sua resposta? ')
             else:
                 if resposta == 'ajuda':
-                    ajudas -= 1
+                    if ajudas == 0:
+                        print('Não deu! Você não tem mais direito à ajuda')
+                        print(questao_printada)
+                        resposta = input('Qual sua resposta? ')
                     if ajudas > 0:
+                        ajudas -= 1
                         ajuda = funcoes.gera_ajuda(questao_sorteada)
                         print('Ok, lá vem ajuda! Você ainda tem 1 ajudas!')
                         print(ajuda)
@@ -191,23 +195,19 @@ while jogar_novamente == True:
                             print('Não deu! Você já pediu ajuda nessa questão')
                             print(questao_printada)
                             resposta = input('Qual sua resposta? ')
-                    if ajudas == 0:
-                        print('Não deu! Você não tem mais direito à ajuda')
+                if resposta == 'pular':
+                    if pulos == 0:
+                        print('Você não tem direito a mais pulos')
                         print(questao_printada)
                         resposta = input('Qual sua resposta? ')
-                if resposta == 'pular':
-                    pulos -= 1
                     if pulos > 0:
+                        pulos -= 1
                         print(f'Ok, pulando! Você ainda tem direito a {pulos} pulos')
                         questao_sorteada = funcoes.sorteia_questao_inedita(base_questoes, nivel, questoes_sorteadas)
                         questao_printada = funcoes.questao_para_texto(questao_sorteada, questoes)
                         print(questao_printada)
                         resposta = input('Qual sua resposta? ')
                         questoes_sorteadas.append(questao_sorteada)
-                    if pulos == 0:
-                        print('Você não tem direito a mais pulos')
-                        print(questao_printada)
-                        resposta = input('Qual sua resposta? ')
                 if resposta == 'parar':
                     print(f'Deseja mesmo parar? Se sim, seu prêmio é de {premio}')
                     parar = input('')
