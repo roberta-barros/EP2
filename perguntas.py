@@ -1,4 +1,4 @@
-quest = [ {'titulo': 'Qual o resultado da operação 57 + 32?',
+quest = [{'titulo': 'Qual o resultado da operação 57 + 32?',
           'nivel': 'facil',
           'opcoes': {'A': '-19', 'B': '85', 'C': '89', 'D': '99'},
           'correta': 'C'},
@@ -257,4 +257,4 @@ quest = [ {'titulo': 'Qual o resultado da operação 57 + 32?',
           'nivel':'facil',
           'opcoes':{'A': '3', 'B': '2', 'C': '1', 'D': '4'}
           'correta': 'B'}
-        ]
+          ]
